@@ -6,6 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MyRangeTest {
 
     @Test
+    @DisplayName("ข้อมูล (1,5] นั้นจะขึ้นต้นด้วย ( (Exclude) ผลที่ได้คือ 2")
+    public void startNumberWithExclude() {
+
+        MyRange myRange = new MyRange("(1,5]");
+        int result = myRange.startNumber();
+        assertEquals(2, result);
+    }
+
+    @Test
     @DisplayName("ข้อมูล [1,5] นั้นจะขึ้นต้นด้วย [ (Include) ผลที่ได้คือ 1")
     public void startNumberWithInclude() {
 

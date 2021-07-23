@@ -11,6 +11,10 @@ public class MyRange {
     }
 
     public int startNumber() {
-        return Integer.parseInt(String.valueOf(this.input.charAt(1)));
+        int originStartNumber = Integer.parseInt(String.valueOf(this.input.charAt(1)));
+        if (isStartWithInclude())
+            return originStartNumber;
+
+        return originStartNumber + 1;
     }
 }
