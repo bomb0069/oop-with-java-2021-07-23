@@ -46,4 +46,12 @@ public class MyRange {
         }
         return result;
     }
+
+    public String listNumber() {
+        String listNumber = "";
+        for (int number: numberArray()) {
+            listNumber += number + ",";
+        }
+        return listNumber.substring(0, listNumber.length() - 1);
+    }
 }

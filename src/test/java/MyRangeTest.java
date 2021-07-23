@@ -5,6 +5,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MyRangeTest {
 
+    @Test
+    @DisplayName("ข้อมูล [1,5] นั้นจะขึ้นต้นและลงท้ายด้วย [] (Include) ผลที่ได้คือ 1,2,3,4,5")
+    public void listNumberWithInclude() {
+        MyRange myRange = new MyRange("[1,5]");
+        String result = myRange.listNumber();
+        assertEquals("1,2,3,4,5", result);
+    }
 
     @Test
     @DisplayName("ข้อมูล [1,5) นั้นจะขึ้นต้นด้วย [ (Include) และลงท้ายด้วย ) (Exclude) ผลที่ได้คือ Array จาก 1 ถึง 4")
