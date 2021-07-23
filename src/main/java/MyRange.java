@@ -17,4 +17,8 @@ public class MyRange {
 
         return originStartNumber + 1;
     }
+
+    public boolean isEndWithInclude() {
+        return this.input.endsWith("]");
+    }
 }
