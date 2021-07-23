@@ -6,6 +6,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MyRangeTest {
 
     @Test
+    @DisplayName("ข้อมูล [1,5) นั้นจะลงท้ายด้วย ) (Exclude) ผลที่ได้คือ false")
+    public void endWithExclude() {
+        MyRange myRange = new MyRange("[1,5)");
+        boolean result = myRange.isEndWithInclude();
+        assertFalse(result);
+    }
+
+    @Test
     @DisplayName("ข้อมูล [1,5] นั้นจะลงท้ายด้วย ] (Include) ผลที่ได้คือ true")
     public void endWithInclude() {
         MyRange myRange = new MyRange("[1,5]");
