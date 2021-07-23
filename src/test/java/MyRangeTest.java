@@ -6,6 +6,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MyRangeTest {
 
     @Test
+    @DisplayName("ข้อมูล [1,5] นั้นจะขึ้นต้นและลงท้ายด้วย [] (Include) ผลที่ได้คือ Array จาก 1 ถึง 5")
+    public void arrayNumberWithInclude() {
+        MyRange myRange = new MyRange("[1,5]");
+        int[] result = myRange.numberArray();
+        assertArrayEquals(new int[] {1,2,3,4,5}, result);
+    }
+
+    @Test
     @DisplayName("ข้อมูล [1,5) นั้นจะลงท้ายด้วย ) (Exclude) ผลที่ได้คือ 4")
     public void endNumberWithExclude() {
         MyRange myRange = new MyRange("[1,5)");

@@ -36,4 +36,14 @@ public class MyRange {
     private int getPreviousNumber(int originalEndNumber) {
         return originalEndNumber - 1;
     }
+
+    public int[] numberArray() {
+        int[] result = new int[endNumber() - startNumber() + 1];
+        int index = 0;
+        for(int i = startNumber(); i <= endNumber(); i ++) {
+            result[index] = i;
+            index++;
+        }
+        return result;
+    }
 }
