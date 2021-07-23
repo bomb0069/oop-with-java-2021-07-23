@@ -1,4 +1,5 @@
 public class MyRange {
+    public static final int ASCII_VALUE_OF_0 = 48;
     private String input;
 
     public MyRange(String input) {
@@ -7,5 +8,9 @@ public class MyRange {
 
     public boolean isStartWithInclude() {
         return this.input.startsWith("[");
+    }
+
+    public int startNumber() {
+        return Integer.parseInt(String.valueOf(this.input.charAt(1)));
     }
 }
