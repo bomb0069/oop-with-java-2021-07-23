@@ -1,5 +1,4 @@
 public class MyRange {
-    public static final int ASCII_VALUE_OF_0 = 48;
     private String input;
 
     public MyRange(String input) {
@@ -15,6 +14,10 @@ public class MyRange {
         if (isStartWithInclude())
             return originStartNumber;
 
+        return getNextNumber(originStartNumber);
+    }
+
+    private int getNextNumber(int originStartNumber) {
         return originStartNumber + 1;
     }
 
@@ -23,6 +26,14 @@ public class MyRange {
     }
 
     public int endNumber() {
-        return Integer.parseInt(String.valueOf(this.input.charAt(3)));
+        int originalEndNumber = Integer.parseInt(String.valueOf(this.input.charAt(3)));
+        if (isEndWithInclude())
+            return originalEndNumber;
+
+        return getPreviousNumber(originalEndNumber);
+    }
+
+    private int getPreviousNumber(int originalEndNumber) {
+        return originalEndNumber - 1;
     }
 }
