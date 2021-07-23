@@ -9,7 +9,7 @@ public class MyRangeTest {
     @DisplayName("ข้อมูล [1,5] นั้นจะลงท้ายด้วย ] (Include) ผลที่ได้คือ 5")
     public void endNumberWithInclude() {
         MyRange myRange = new MyRange("[1,5]");
-        int result = myRange.endNumberWithInclude();
+        int result = myRange.endNumber();
         assertEquals(5, result);
     }
 

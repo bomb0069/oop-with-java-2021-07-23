@@ -22,7 +22,7 @@ public class MyRange {
         return this.input.endsWith("]");
     }
 
-    public int endNumberWithInclude() {
+    public int endNumber() {
         return Integer.parseInt(String.valueOf(this.input.charAt(3)));
     }
 }
