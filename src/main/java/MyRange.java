@@ -21,4 +21,8 @@ public class MyRange {
     public boolean isEndWithInclude() {
         return this.input.endsWith("]");
     }
+
+    public int endNumberWithInclude() {
+        return Integer.parseInt(String.valueOf(this.input.charAt(3)));
+    }
 }
